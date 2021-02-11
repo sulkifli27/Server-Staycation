@@ -97,7 +97,6 @@ module.exports = {
   addCategory: async (req, res) => {
     try {
       const { name } = req.body;
-      // console.log(name);
       await Category.create({ name });
       req.flash("alertMessage", "Success Add Category");
       req.flash("alertStatus", "success");
@@ -605,7 +604,6 @@ module.exports = {
         user: req.session.user,
         booking,
       });
-      console.log(booking);
     } catch (error) {
       res.redirect("/admin/booking");
     }
@@ -620,7 +618,7 @@ module.exports = {
       const alertMessage = req.flash("alertMessage");
       const alertStatus = req.flash("alertStatus");
       const alert = { message: alertMessage, status: alertStatus };
-      console.log(booking);
+
       res.render("admin/booking/show_detail_booking", {
         title: "Staycation | Detail Booking ",
         user: req.session.user,

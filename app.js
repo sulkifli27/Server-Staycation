@@ -8,12 +8,15 @@ const session = require("express-session");
 const flash = require("connect-flash");
 // import Mongoose
 const mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost:27017/staycation", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useCreateIndex: true,
-  useFindAndModify: false,
-});
+mongoose.connect(
+  "mongodb://sul:animasi27021998@cluster0-shard-00-00.a2qfh.mongodb.net:27017,cluster0-shard-00-01.a2qfh.mongodb.net:27017,cluster0-shard-00-02.a2qfh.mongodb.net:27017/staycation?ssl=true&replicaSet=atlas-9tnm88-shard-0&authSource=admin&retryWrites=true&w=majority",
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false,
+  }
+);
 
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
@@ -31,7 +34,7 @@ app.use(
     secret: "keyboard cat",
     resave: false,
     saveUninitialized: true,
-    cookie: { maxAge: 60000 },
+    cookie: { maxAge: 6000000000 },
   })
 );
 app.use(flash());
