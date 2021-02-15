@@ -48,7 +48,7 @@ module.exports = {
         _id: "asd1293uasdads1",
         imageUrl: "/images/testimonial-landingpages.jpg",
         name: "Happy Family",
-        rate: 1.5,
+        rate: 4.5,
         content:
           "What a great trip with my family and I should try again next time soon ...",
         familyName: "Angga",
@@ -93,7 +93,7 @@ module.exports = {
         _id: "asd1293uasdads1",
         imageUrl: "/images/testimonial-landingpages.jpg",
         name: "Happy Family",
-        rate: 1.5,
+        rate: 4.5,
         content:
           "What a great trip with my family and I should try again next time soon ...",
         familyName: "Angga",
